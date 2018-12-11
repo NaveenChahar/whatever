@@ -1,0 +1,25 @@
+<form #userForm="ngForm" (ngsubmit)="onSubmit()" invalidate>
+        <div class="example-container">
+                <mat-form-field>
+                  <input matInput placeholder="Addhar No" required name="AddharNo" [(ngModel)]="details.adhno">
+                </mat-form-field>
+                <mat-form-field>
+                        <input matInput placeholder="Bank Account No" required name="BankAcNo" [(ngModel)]="details.bankacno">
+                </mat-form-field>
+                <mat-form-field>
+                        <input matInput placeholder="Pan Card No" required name="PanCardNo" [(ngModel)]="details.pancardno">
+                </mat-form-field>
+                <mat-form-field>
+                        <input matInput placeholder="Nominee" required name="Nominee" [(ngModel)]="details.nominee">
+                </mat-form-field>
+                <br>
+                <label class="label">All KYC Documents *</label>
+                <input type="file" accept=".txt,.doc,.jpg,.png" name="files[]" multiple>
+                <button mat-button class="sub" type="submit">Submit</button>
+        </div>
+
+
+
+
+    
+  </form>
