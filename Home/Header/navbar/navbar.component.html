@@ -1,0 +1,83 @@
+<div id='navbar'>
+  <div class="clearfix">
+    <ul class="left inlineTable" id="navbar_Table">
+      <li id="dropdown">
+        <a class="navbar_padding">
+        <span>SHOP BY CATEGORY</span>
+        <span>
+          <i class="svg-header svg-arrow-down svg-arrow-down-dim" aria-hidden="true"></i> 
+        </span>
+        </a>  
+        <div id="dropdown_content">
+          <div class="flex_container">
+          <div id="ddc_1">
+            <ul>
+              <li (mouseover)="changeCategory(category)" *ngFor="let category of categorylist">
+                <a href="">{{category.categoryName}}</a></li>
+                <li style="border: none">
+                  <a href="">View All</a>
+                </li>
+            </ul>
+          </div>
+          <div id="ddc_2">
+            <ul>
+              <li (mouseover)="changeSubcategory(subCategory)" *ngFor="let subCategory of subcategory">
+                <a>{{subCategory.subcategoryName}}</a>
+              </li>
+            </ul>
+          </div>
+          <div id="ddc_3">
+            <ul>
+              <li *ngFor="let product of products">
+                <a>{{product.productName}}</a>
+              </li>
+            </ul>
+          </div>
+          <div id="ddc_4">
+            <ul>
+              <li></li>
+            </ul>
+          </div>
+        </div>
+        </div> 
+
+      </li>
+      <li>
+        <a class="navbar_padding" routerLink="/basket">
+            <span>
+              <i class="svg-header svg-offer-icon svg-offer-icon-dim"></i>
+            </span>
+            <span>OFFERS</span>
+        </a>
+      </li>
+      <li>
+        <a class="navbar_padding" routerLink="/basket">
+            <span>
+              <i class="svg-header svg-express-red svg-express-red-dim"></i>
+            </span>
+            <span>BB EXPRESS</span>
+        </a>
+      </li>
+      <li>
+        <a class="navbar_padding" routerLink="/speciality">
+        <span>
+            <i class="svg-header svg-bb-speciality svg-bb-speciality-dim"></i>
+        </span>
+        <span>BB SPECIALITY</span>
+        </a>
+      </li>
+      <li>
+        <a class="navbar_padding" [routerLink]="">
+        <span>
+          <i class="svg-header svg-more-store svg-more-store-dim"></i>
+        </span>
+        <span>MORE STORES</span>
+        <span style="color: #555!important">
+          <i style="margin-left: 8px;" class="svg-header svg-arrow-down-2 svg-arrow-down-dim" aria-hidden="true"></i> 
+        </span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+  

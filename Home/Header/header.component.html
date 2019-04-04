@@ -1,0 +1,90 @@
+<div class="header">
+    <div id="top_nav">
+        <div class="clearfix">
+            <div class="right" style="height: 27.36px">
+                <ul class="inlineTable" id="topnav_ul">
+                    <li>
+                        <span>
+                            <i class="svg-header svg-call svg-call-dim"></i>
+                            <span style="padding-left: 3px">1860 123 1000</span>
+                        </span>
+                    </li>
+                    <li>
+                        <div id="loc_selector">
+                            <a [routerLink]="" (click)="showAddress()">
+                                <i class="svg-header svg-location svg-location-dim"></i>
+                                <span>{{address}}</span>
+                                ,
+                                <span>{{location}}</span>
+                                <span style="padding-left: 5px">
+                                    <i class="arrow_down" aria-hidden="true"></i> 
+                                </span>
+                            </a>
+                        </div>
+                        <div id="addressSelector" *ngIf="addressSelector">
+                            <div *ngIf="false"></div>
+                            <div></div>
+                        </div>
+                    </li>
+                    <li style="padding-right: 0px!important">
+                        <div>
+                            <span>
+                                <i class="svg-header svg-user svg-user-dim"></i>
+                            </span>
+                            <span><a>Login</a></span>
+                            <span style="margin:0px 5px;font-size: 10px;top: 0px">|</span>
+                            <span><a>Sign up</a></span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="middle_nav" [ngClass]="{'sticky': isSticky}" >
+        <div style="display: flex" [ngClass]="{'sticky_wrap':isSticky}">
+        <div id="logo" *ngIf="!isSticky">
+            <a href=""><img src="https://sandscapitalventures.com/wp-content/uploads/2017/01/Logo-BigBasket-2.png"></a>
+        </div>
+        <div id="stickyLogo" *ngIf="isSticky">
+            <span>
+                <a href=""><img src=""></a>
+            </span>
+            <span>
+                <div>
+                    <a>
+                        SHOP
+                        <i></i>
+                    </a>
+                </div>
+            </span>
+        </div>
+        <div id="searchbar">
+            <input type="text" placeholder="Search for Products..">
+            <button>
+                <i class="svg-header svg-search svg-search-dim"></i>
+            </button>
+        </div>
+        <div id="New_Launches">
+            <button routerLink="/basket" type="text">NEW LAUNCHES</button>
+        </div>
+        <div id="cart">
+            <span>
+                <div style="display: inline-block;padding-right: 6px;">
+                   <i class="icon svg-basket svg-header svg-basket-dim"></i>    
+                </div>
+            </span>
+            <span><div class="cart_div">
+                My Basket 
+                <br>
+                <span style="padding-right: 3px">items</span>
+            </div></span>
+        </div>
+        </div>
+
+    </div>
+    <div id="bottom_nav">
+        <app-navbar></app-navbar>
+    </div>
+</div>
+
+

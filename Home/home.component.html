@@ -1,49 +1,5 @@
-<mat-toolbar color="primary">
-  <span>Angular MatTable CRUD Example</span>
-  <span class="spacer"></span>
-  Reload data:
-  <button mat-icon-button (click)="refresh()">
-    <mat-icon>refresh</mat-icon>
-  </button>
-</mat-toolbar>
-
-<div style="width: 100" class="mat-elevation-z8">
-
-
-  <mat-table #table [dataSource]="dataSource" matSort class="mat-cell">
-
-    <!--- Note that these columns can be defined in any order.
-          The actual rendered columns are set as a property on the row definition" -->
-
-    <!-- ID Column -->
-    <ng-container *ngFor="let col of columns" matColumnDef={{col}}>
-      <mat-header-cell *matHeaderCellDef mat-sort-header>{{col}}</mat-header-cell>
-      <mat-cell *matCellDef="let row" >{{row[col]}}</mat-cell>
-    </ng-container>
-    
-    <ng-container matColumnDef="actions">
-      <mat-header-cell *matHeaderCellDef>
-        <button mat-icon-button color="primary" (click)="addNew()">
-          <mat-icon aria-label="Example icon-button with a heart icon">add</mat-icon>
-        </button>
-      </mat-header-cell>
-
-      <mat-cell *matCellDef="let row; let i=index;">
-        <button mat-icon-button color="accent" (click)="startEdit(i)">
-          <mat-icon aria-label="Edit">edit</mat-icon>
-        </button>
-
-        <button mat-icon-button color="accent" (click)="deleteItem(i)">
-          <mat-icon aria-label="Delete">delete</mat-icon>
-        </button>
-      </mat-cell>
-    </ng-container>
-
-    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-  </mat-table>
-  <div class="no-results" [style.display]="dataSource.length == 0 ? '' : 'none'">
-    No results
-  </div>
-
+<div class="body1">
+<header></header>
+<content></content>
+<footer></footer>
 </div>

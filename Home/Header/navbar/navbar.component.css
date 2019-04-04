@@ -1,0 +1,209 @@
+.right{
+    float: right;
+}
+.left{
+    float: left
+}
+.clearfix{
+   content: "";
+   clear:both;
+   display: table 
+}
+a{
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    height: 100%;
+    width: 100%;
+}
+.inlineTable li{
+    display: inline-block;
+    text-decoration: none
+}
+ul{
+    margin: 0px;
+    padding: 0px;
+}
+p{
+    margin: 0px!important;
+}
+.arrow_down{
+    width: 18px;
+    display: inline-block;
+    background: url(../../media/img/arrowdown.svg);
+    height: 10px;
+    background-repeat: no-repeat;
+    background-size: 10px;
+    background-position: 2px 4px;
+}
+#navbar{
+    height: 40px;
+    border: 1px solid #dedede;
+    box-sizing: border-box;
+}
+.navbar_padding{
+    padding: 10px 10px 10px 10px;
+    box-sizing: border-box;
+}
+.navbar_padding:hover{
+    color: white!important;
+    background-color: #84c225;
+}
+#navbar_Table{
+    margin-top: -1px!important;
+}
+#navbar_Table::before{
+    content: "";
+    display: table;
+    box-sizing: border-box;
+}
+#dropdown{
+    background-color: #84c225;
+    color: white!important;
+    font-size: 15px;
+    font-weight: 800;
+    position: relative;
+}
+#dropdown_content{
+    display: none;
+    position: absolute;
+    color: black;
+    top: 38px;
+    left: 0px;
+    z-index: 1100;
+    width: 970px;
+    height:460px;
+    background-color: white;
+}
+#dropdown:hover #dropdown_content{
+    display: block;
+}
+.flex_container{
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+}
+#ddc_1{
+    width: 20%!important;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 400;
+    color: #666!important;
+
+}
+#ddc_1 ul li{
+   border-bottom: 1px solid #dedede; 
+   width: 100%;
+   padding: 7px 10px 7px 10px;
+   box-sizing: border-box;
+}
+#ddc_1 ul li:hover{
+    color: black;
+    font-weight: 600;
+    background-color: #eaeaea;
+}
+#ddc_2{
+    width: 30%;
+    height: 100%;
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 400;
+    background-color: #eaeaea;
+    color: #666!important;
+}
+#ddc_2 ul li{
+    width: 100%;
+    padding: 7px 10px 7px 10px;
+    box-sizing: border-box;
+
+ }
+#ddc_2 ul li:hover{
+    color: black;
+    font-weight: 600;
+    background-color: white;
+}
+#ddc_3{
+    width: 25%;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 400;
+    color: #666!important;
+    
+}
+#ddc_3 ul li{
+    width: 100%;
+    padding: 7px 10px 7px 10px;
+    box-sizing: border-box;
+ }
+#ddc_3 ul li:hover{
+    color: #096;
+    font-weight: 600;
+}
+#ddc_4{
+    width: 25%;
+}
+
+.svg-header{
+    background-image: url(../../media/custom/header.css.svg);
+    vertical-align: middle;
+    display: inline-block
+}
+.svg-arrow-down{
+    background-position: 1.3986013986013985% .9754367945000971%;
+}
+.svg-arrow-down-dim{
+    width: 10px;
+    height: 5.89px;
+    margin-left: 15px;
+}
+
+.svg-offer-icon{
+    background-position: 60.281858250815965% 60.23102310231023%;
+}
+.navbar_padding:hover .svg-offer-icon{
+    background-position: 62.53538566206142% 62.70627062706271%!important;
+}
+.svg-offer-icon-dim{
+    width: 15px;
+    height: 15px;
+    margin-right: 4px;
+}
+
+.svg-express-red{
+    background-position: 31.004766738867104% 27.22772277227723%;
+}
+.navbar_padding:hover .svg-express-red{
+    background-position: 35.16744375473352% 29.702970297029704%!important;
+}
+.svg-express-red-dim{
+    width: 28.33px;
+    height: 15px;
+    margin-right: 4px;
+}
+
+.svg-bb-speciality{
+    background-position: 16.173811611102742% 14.851485148514852%;
+}
+.svg-bb-speciality-dim{
+    width: 20.16px;
+    height: 15px;
+    margin-right: 4px;
+}
+
+.svg-more-store{
+    background-position: 55.37849193177754% 55.28052805280528%;
+}
+.navbar_padding:hover .svg-more-store{
+    background-position: 57.921381867420386% 57.755775577557756%!important;
+}
+.svg-more-store-dim{
+    width: 17.14px;
+    height: 15px;
+    margin-right: 4px;
+}
+.svg-arrow-down-2{
+    background-position: 0 0;
+}
+.navbar_padding:hover .svg-arrow-down-2{
+    background-position: 1.3986013986013985% .9754367945000971%;
+}
