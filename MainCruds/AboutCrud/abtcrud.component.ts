@@ -29,16 +29,16 @@ export class AboutCrudComponent{
         })
     }
     fillinitialData(){
-        this.titleArr.push(this.initialAbtData.aboutTitle.titleName);
+        this.titleArr.push(this.createTitleName(this.initialAbtData.aboutTitle.titleName));
         for(let str of this.initialAbtData.aboutTitle.paragraph){
-            this.paragraphArr.push(str);
+            this.paragraphArr.push(this.createParagraph(str));
         }
         for(let str of this.initialAbtData.aboutTitle.lists){
-            this.listsArr.push(str);
+            this.listsArr.push(this.createList(str));
         }
-        this.subtitleArr.push(this.initialAbtData.aboutSubTitle.subTitleName);
+        this.subtitleArr.push(this.createsubTitleName(this.initialAbtData.aboutSubTitle.subTitleName));
         for(let str of this.initialAbtData.aboutSubTitle.subTitleParagraphs){
-            this.subtitleParaArr.push(str);
+            this.subtitleParaArr.push(this.createsubParagraph(str));
         }
     }
 
