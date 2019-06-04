@@ -1,0 +1,103 @@
+<form [formGroup]="abtForm" *ngIf='datacame' (ngSubmit)="onsubmit(abtForm.value)">
+    <h2>About Title</h2>
+    <div formArrayName="titleName"
+      *ngFor="let abttitle of abtForm.controls.titleName.controls; let i = index;">
+      <div class="containerPara">
+          <div class="matField">
+        <mat-form-field class="example-full-width">
+        <textarea matInput placeholder="About Title" formControlName="{{i}}"></textarea>
+        </mat-form-field></div>
+        <div class="buttonDiv">
+          <button mat-raised-button type="button" color='accent' (click)='deleteTitleName(i)'>Delete Title</button>
+      </div>
+    </div>
+    </div>
+    <div class="addButton">
+          <button mat-raised-button type="button" color='accent' (click)='addTitleName()'>Add Title</button>
+      </div>
+    <h2>About Paragraphs <title></title></h2>
+    <div formGroupName="titleParagraph">
+    <div formArrayName="paragraph"
+      *ngFor="let abttitle of abtForm.controls.titleParagraph.controls.paragraph.controls; let i = index;">
+      <div class="containerPara">
+          <div class="matField">
+        <mat-form-field class="example-full-width">
+        <textarea matInput placeholder="About Paragraph" formControlName="{{i}}"></textarea>
+        </mat-form-field></div>
+        <div class="buttonDiv">
+            <button mat-raised-button type="button" color='accent' (click)='deleteParagraph(i)'>Delete Paragraph</button>
+        </div>
+  
+    </div>
+    </div>
+  
+    </div>
+    <div class="addButton">
+          <button mat-raised-button type="button" color='accent' (click)='addTitlePara()'>Add Paragraph</button>
+      </div>
+    <h2>About Lists <title></title></h2>
+    <div formGroupName="titleParagraph">
+    <div formArrayName="lists"
+      *ngFor="let abttitle of abtForm.controls.titleParagraph.controls.lists.controls; let i = index;">
+      <div class="containerPara">
+          <div class="matField">
+        <mat-form-field class="example-full-width">
+        <textarea matInput placeholder="About List" formControlName="{{i}}"></textarea>
+        </mat-form-field></div>
+        <div class="buttonDiv">
+            <button mat-raised-button type="button" color='accent' (click)='deleteList(i)'>Delete List</button>
+        </div>
+  
+    </div>
+    </div>
+  
+    </div>
+    <div class="addButton">
+          <button mat-raised-button type="button" color='accent' (click)='addTitleList()'>Add List</button>
+      </div>
+    <h2>About SubTitles</h2>
+    
+    <div formGroupName="aboutSubTitle">
+    <div formArrayName="subTitleName"
+      *ngFor="let abttitle of abtForm.controls.aboutSubTitle.controls.subTitleName.controls; let i = index;">
+      <div class="containerPara">
+          <div class="matField">
+        <mat-form-field class="example-full-width">
+        <textarea matInput placeholder="About SubTitle" formControlName="{{i}}"></textarea>
+        </mat-form-field></div>
+        <div class="buttonDiv"> 
+            <button mat-raised-button type="button" color='accent' (click)='deletesubTitleName(i)'>Delete Sub Title</button>
+        </div>
+  
+    </div>
+    </div>
+  
+    </div>
+    <div class="addButton">
+          <button mat-raised-button type="button" color='accent' (click)='addsubTitleName()'>Add Sub Title</button>
+      </div>
+    <h2>About SubTitleParagraphs</h2>
+    <div formGroupName="aboutSubTitle">
+    <div formArrayName="subTitleParagraphs"
+      *ngFor="let abttitle of abtForm.controls.aboutSubTitle.controls.subTitleParagraphs.controls; let i = index;">
+      <div class="containerPara">
+          <div class="matField">
+        <mat-form-field class="example-full-width">
+        <textarea matInput placeholder="About SubTitleParagraph" formControlName="{{i}}"></textarea>
+        </mat-form-field></div>
+        <div class="buttonDiv">
+            <button mat-raised-button type="button" color='accent' (click)='deletesubParagraph(i)'>Delete Paragraph</button>
+        </div>
+  
+    </div>
+    </div>
+  
+    </div>
+    <div class="addButton">
+          <button mat-raised-button type="button" color='accent' (click)='addsubTitlePara()'>Add Sub Title Paragraph</button>
+      </div>
+    <div class="buttonInside">
+          <button mat-raised-button class="submitButton" type="submit" [disabled]="abtForm.invalid||titleArr.length!=1||subtitleArr.length!=1">
+              submit</button>
+    </div>
+  </form>

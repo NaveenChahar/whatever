@@ -1,0 +1,203 @@
+<div id="footer">
+    <div id="info">
+        <div *ngIf="aboutData" class="wrapper">
+            <h2 style="color: #84c225">{{aboutData.aboutTitle.titleName}}</h2>
+            <p *ngFor="let paragraph of aboutData.aboutTitle.titleParagraph[0].paragraph">
+                {{paragraph}}
+            </p>
+            <ul>
+            <li *ngFor="let list of aboutData.aboutTitle.titleParagraph[0].lists">
+                {{list}}
+            </li>
+            <button *ngIf="!readMore" (click)="readmore()">Read more..</button>
+            </ul>
+            <div *ngIf="readMore">
+                <h2 style="color: #84c225">{{aboutData.aboutSubTitle[0].subTitleName}}</h2>
+                <p *ngFor="let paragraph of aboutData.aboutSubTitle[0].subTitleParagraphs">
+                {{paragraph}}
+                </p>
+            </div>
+        </div>
+    </div>
+    <div id="footer_links">
+        <div class="footer_links_1">
+            <h4>bigbasket</h4>
+            <ul>
+                <!---<li *ngFor="let about in footerData.about">
+                    <a [routerLink]="footerData.about[about]">{{footerData.about}}</a>
+                </li>-->
+                <li>
+                    <a href="">About Us</a>
+                </li>
+                <li>
+                    <a href="">In News</a>
+                </li>
+                <li>
+                    <a href="">Green bigbasket</a>
+                </li>
+                <li>
+                    <a href="">Privacy Policy</a>
+                </li>
+                <li>
+                    <a href="">Affiliate</a>
+                </li>
+                <li>
+                    <a href="">Terms and Conditions</a>
+                </li>
+                <li>
+                    <a href="">Careers At bigbasket</a>
+                </li>
+            </ul>   
+        </div>
+        <div class="footer_links_1">
+            <h4>Help</h4>
+            <ul>
+                <!--<li *ngFor="let help in footerData.help">
+                    <a [routerLink]="footerData.help[help]">{{footerData.help}}</a>
+                </li>-->
+                <li>
+                    <a href="">FAQs</a>
+                </li>
+                <li>
+                    <a href="">Contact Us</a>
+                </li>
+                <li>
+                    <a href="">bb Wallet FAQs</a>
+                </li>
+                <li>
+                    <a href="">bb Wallet T&Cs</a>
+                </li>
+                <li>
+                    <a href="">Vendor Connect</a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer_links_2">
+            <h4>Download Our App</h4>
+            <a href="">
+                <img src="../media/img/Google-App-store-icon.png">
+            </a>
+            <a href="">
+                <img src="../media/img/Apple-App-store-icon.png">
+            </a>
+        </div>
+        <div class="footer_links_2">
+            <h4>Get Social With Us</h4>
+            <div id="social">
+                <a id="social_a1" href="">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a id="social_a2" href="">
+                    <i class="fab fa-pinterest-p"></i>
+                </a>
+                <a id="social_a3" href="">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a id="social_a4" href="">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+            <div id=""></div>
+        </div>
+    </div>
+    <div id="footer_nav">
+        <div>
+            <div class="footnav_1">
+                <h4>Popular Categories:</h4>
+            </div>
+            <div class="footnav_2">
+                <ul>
+                    <!--<li *ngFor="">
+                        <a [routerLink]="">
+                            <span>{{}}</span>
+                            ,
+                        </a>
+                    </li>-->
+                    <li><a href="">Fruits & Vegetables, </a></li>
+                    <li><a href="">Basmati Rice, </a></li>
+                    <li><a href="">Green Tea, </a></li>
+                    <li><a href="">OTC, </a></li>
+                    <li><a href="">Cheese, </a></li>
+                    <li><a href="">Dry Fruits, </a></li>
+                    <li>hello, </li>
+                    <li>hello, </li>
+                    <li>hello, </li>
+                    <li>hello, </li>
+                    <li>hello, </li>
+                    <li>hello, </li>
+                    <li>hello, </li>
+                    <li>hello, </li>
+                    <li>hello, </li>
+                    <li>hello, </li>
+                    <li>hello, </li>
+                    <li>hello, </li>
+                    <li>hello, </li>
+                    <li>hello, </li>
+                    <li>hello, </li>
+                    <li>hello, </li>
+                    <li>hello, </li>
+                    <li>hello, </li>
+                    <li>hello, </li>
+
+                    
+                </ul>
+            </div>
+        </div>
+        <div>
+            <div class="footnav_1">
+                <h4>Popular Brands:</h4>
+            </div>
+            <div class="footnav_2">
+                <ul>
+                    <!--<li *ngFor="">
+                        <a [routerLink]="">
+                            <span>{{}}</span>
+                            ,
+                        </a>
+                    </li>-->
+                    
+                </ul>
+            </div>
+        </div>
+        <div>
+            <div class="footnav_1">
+                <h4>Cities We Serve:</h4>
+            </div>
+            <div class="footnav_2">
+                <ul>
+                    <!--<li *ngFor="">
+                        <a [routerLink]="">
+                            <span>{{}}</span>
+                            ,
+                        </a>
+                    </li>-->
+                    <li>
+                        <a></a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div>
+            <div class="footnav_1">
+                <h4>Payment Options:</h4>
+            </div>
+            <div class="footnav_2">
+                <ul>
+                    <!--<li *ngFor="">
+                        <a [routerLink]="">
+                            <span>{{}}</span>
+                            ,
+                        </a>
+                    </li>-->
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="copyrights">
+        <div style="margin-left: 50px">
+            <p style="margin: 0px;padding: 7px 0px;color: gray">Copyright © 2011-2018 Supermarket Grocery Supplies Pvt Ltd</p>
+        </div>
+    </div>
+</div>
