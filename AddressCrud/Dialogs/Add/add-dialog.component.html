@@ -1,0 +1,9 @@
+<h1>add works</h1>
+<form [formGroup]="demo" (ngSubmit)="Add(demo.value)">
+    <mat-form-field formArrayName="addarray" *ngFor="let key of keyArray; let i=index">
+        <mat-label>{{key}}</mat-label>
+        <input matInput placeholder="" [formControlName]="i">
+      </mat-form-field>
+      <button type="submit" [disabled]="!demo.valid">Submit</button>
+</form>
+<button (click)="Cancel()">Cancel</button>
