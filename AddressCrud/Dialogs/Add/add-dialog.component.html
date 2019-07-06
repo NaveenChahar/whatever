@@ -1,9 +1,12 @@
-<h1>add works</h1>
+
+
+<div class="heading"><h1 >ADD NEW DATA</h1></div>
+
 <form [formGroup]="demo" (ngSubmit)="Add(demo.value)">
-    <mat-form-field formArrayName="addarray" *ngFor="let key of keyArray; let i=index">
+    <mat-form-field style="margin: 5px 4px 2px 7px" formArrayName="addarray" *ngFor="let key of keyArray; let i=index">
         <mat-label>{{key}}</mat-label>
-        <input matInput placeholder="" [formControlName]="i">
+        <input matInput placeholder="Enter the value" [formControlName]="i">
       </mat-form-field>
-      <button type="submit" [disabled]="!demo.valid">Submit</button>
+      <button mat-raised-button  class="csstoButton" [disabled]="!demo.valid">Submit</button>
+      <button mat-raised-button  type="button" class="csstoButton" (click)="Cancel()">Cancel</button>
 </form>
-<button (click)="Cancel()">Cancel</button>

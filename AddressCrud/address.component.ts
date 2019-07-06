@@ -40,8 +40,8 @@ export class AddressCrud implements OnInit{
 
     addNew(){
         const dialogRef=this.dialog.open(AddressAddDialogComponent,{
-            height:'300px',
-            width:'400px',
+            height:'330px',
+            width:'430px',
             data:this.dataSource[0],
         });
         dialogRef.afterClosed().subscribe(result => {
@@ -70,8 +70,8 @@ export class AddressCrud implements OnInit{
     }
     startEdit(row){
         const dialogRef=this.dialog.open(AddressEditDialogComponent,{
-            height:'300px',
-            width:'400px',
+            height:'330px',
+            width:'430px',
             data:row,
         });
         dialogRef.afterClosed().subscribe(result => {
@@ -100,8 +100,8 @@ export class AddressCrud implements OnInit{
     }
     deleteItem(row){
         const dialogRef=this.dialog.open(AddressDeleteDialogComponent,{
-            height:'300px',
-            width:'400px',
+            height:'330px',
+            width:'430px',
             data:null,
         });
         dialogRef.afterClosed().subscribe(result => {

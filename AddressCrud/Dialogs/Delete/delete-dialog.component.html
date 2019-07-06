@@ -1,4 +1,9 @@
-<h1>delete works</h1>
-<h2>Are you sure about this</h2>
-<button (click)="Delete()">Delete</button>
-<button (click)="Cancel()">Cancel</button>
+<div class="heading"><h1 >DELETE THE DATA</h1></div>
+
+<div id="form">
+    <h2>Are you sure you want to delete this Entry</h2>
+</div>
+<div>
+    <button mat-raised-button  class="csstoButton" (click)="Delete()">Delete</button>
+    <button mat-raised-button  type="button" class="csstoButton" (click)="Cancel()">Cancel</button>
+</div>

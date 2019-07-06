@@ -1,0 +1,20 @@
+.csstoButton{
+    margin:1rem;
+    background-color:#fdd835; 
+}
+
+.heading{
+    text-align: center;
+    background-color:#3F51B5;
+    color:white;
+    padding:1rem;
+
+
+
+}
+::ng-deep .mat-dialog-container{
+padding:0px !important;
+}
+
+
+

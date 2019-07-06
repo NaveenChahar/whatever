@@ -1,9 +1,10 @@
-<h1>edit works</h1>
+<div class="heading"><h1 >EDIT THE DATA</h1></div>
+
 <form [formGroup]="demo" (ngSubmit)="Edit(demo.value)">
-    <mat-form-field formArrayName="addarray" *ngFor="let key of keyArray; let i=index">
+    <mat-form-field style="margin: 5px 4px 2px 7px" formArrayName="addarray" *ngFor="let key of keyArray; let i=index">
         <mat-label>{{key}}</mat-label>
         <input matInput placeholder="" [formControlName]="i">
       </mat-form-field>
-      <button type="submit">Submit</button>
+      <button mat-raised-button class="csstoButton" [disabled]='demo.invalid'>Submit</button>
+      <button mat-raised-button  class="csstoButton" type="button" (click)="Cancel()">Cancel</button>
 </form>
-<button (click)="Cancel()">Cancel</button>
