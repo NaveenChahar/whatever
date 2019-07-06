@@ -27,10 +27,16 @@ export class AboutCrudComponent implements OnInit{
     initialData() {
         //get all the data
         this.abtcrudService.Aboutjsonretrieve().subscribe(data=>{
+            if(data){
             console.log(data);
             this.initialAbtData=data.data;
             console.log(this.initialAbtData.aboutTitle.titleName);
             this.fillinitialData();
+            }
+            else{
+                this.firstTimeFill();
+            }
+            this.datacame=true;
         })
     }
     fillinitialData(){
@@ -47,7 +53,19 @@ export class AboutCrudComponent implements OnInit{
             this.subtitleParaArr.push(this.createsubParagraph(subObject.subTitleParagraphs[0]));
         }
           this.createForm();
-          this.datacame=true;
+    }
+
+    firstTimeFill(){
+        this.titleArr.push(this.createTitleName(''));
+        this.paragraphArr.push(this.createParagraph(''));
+        this.listsArr.push(this.createList(''));
+        this.subtitleArr.push(this.createsubTitleName(''));
+        this.subtitleParaArr.push(this.createsubParagraph(''));
+
+
+
+
+
     }
 
     createForm(){
